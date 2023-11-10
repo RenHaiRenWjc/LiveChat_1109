@@ -1,10 +1,23 @@
 import 'package:flutter/material.dart';
 
+import 'package:flutter_native_splash/flutter_native_splash.dart';
+
+
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  initialization(null);
   runApp(const MyApp());
 }
 
+//启动图延时移除方法
+void initialization(BuildContext? context) async {
+  //延迟3秒
+  await Future.delayed(const Duration(seconds: 30));
+  FlutterNativeSplash.remove();
+}
+
 class MyApp extends StatelessWidget {
+
   const MyApp({super.key});
 
   // This widget is the root of your application.

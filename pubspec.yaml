@@ -13,8 +13,23 @@ dependencies:
   flutter:
     sdk: flutter
 
-
   cupertino_icons: ^1.0.2
+  get: ^4.6.6
+
+  ## 启动图
+  flutter_native_splash: ^2.3.5
+
+  ## 屏幕适配
+  flutter_screenutil: ^5.9.0
+
+  ## 网络请求
+  dio: ^5.3.3
+
+  ## 权限
+  permission_handler: ^11.0.1
+
+  ##
+  shared_preferences: ^2.2.2
 
 dev_dependencies:
   flutter_test:
@@ -27,5 +42,7 @@ dev_dependencies:
 flutter:
 
   uses-material-design: true
+  assets:
+    - images/
 
 
