@@ -1,4 +1,4 @@
-name: livechat
+name: com.jc.livechat
 description: A new Flutter project.
 
 publish_to: 'none'
@@ -30,6 +30,9 @@ dependencies:
 
   ##
   shared_preferences: ^2.2.2
+
+  ### 日志
+  logger: ^2.0.2+1
 
 dev_dependencies:
   flutter_test:
