@@ -1,11 +1,12 @@
-import 'package:com.jc.livechat/router/AppRoutes.dart';
-import 'package:com.jc.livechat/router/GetPages.dart';
+import 'package:com.jc.livechat/GetPages.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+
+import 'GlobalConstant/AppRoutes.dart';
 
 
 void main() {
