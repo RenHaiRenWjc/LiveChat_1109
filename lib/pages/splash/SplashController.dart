@@ -1,5 +1,5 @@
+import 'package:com.jc.livechat/router/AppRoutes.dart';
 import 'package:get/get.dart';
-
 
 
 class SplashController extends GetxController {
@@ -10,6 +10,7 @@ class SplashController extends GetxController {
   }
 
   Future<void> autoLogin() async {
+    Get.toNamed(AppRoutes.login);
     // var mAccountInfo = MineInfo().wyGetAccountFromLocal();
     // LogTools.i("TAG", "mAccountInfo=$mAccountInfo");
     // if (mAccountInfo == null) {

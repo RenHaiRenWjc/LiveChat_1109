@@ -5,7 +5,7 @@ class AppConfig {
 
   AppConfig._init() {}
 
-  static const SERVER_HOST_DEBUG = 'http://ncapi.yeban888.com';
+  static const SERVER_HOST_DEBUG = 'https://www.wanandroid.com';
 
   static const SERVER_HOST_RELEASE = 'https://ncapi.yeban888.com';
 
