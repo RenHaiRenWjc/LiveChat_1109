@@ -19,7 +19,7 @@ class UserInfo {
     bool? admin,
     String? email,
     String? icon,
-    Long? id,
+    int? id,
     String? nickname,
     String? password,
     String? publicName,
@@ -64,7 +64,7 @@ class UserInfo {
   bool? _admin;
   String? _email;
   String? _icon;
-  Long? _id;
+  int? _id;
   String? _nickname;
   String? _password;
   String? _publicName;
@@ -79,7 +79,7 @@ class UserInfo {
     bool? admin,
     String? email,
     String? icon,
-    Long? id,
+    int? id,
     String? nickname,
     String? password,
     String? publicName,
@@ -112,7 +112,7 @@ class UserInfo {
 
   String? get icon => _icon;
 
-  Long? get id => _id;
+  int? get id => _id;
 
   String? get nickname => _nickname;
 

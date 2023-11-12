@@ -1,6 +1,7 @@
 import 'package:com.jc.livechat/bean/UserInfo.dart';
 import 'package:com.jc.livechat/network/ApiService.dart';
 import 'package:com.jc.livechat/network/ServiceHttp.dart';
+import 'package:com.jc.livechat/pages/manager/UserInfoManager.dart';
 import 'package:com.jc.livechat/router/AppRoutes.dart';
 import 'package:get/get.dart';
 
@@ -15,9 +16,9 @@ class LoginPageController extends GetxController {
   void login(String username, String password) async {
     Map<String, dynamic> params = {"username": username, "password": password};
     var loginResult = await ServiceHttp().post(ApiService.login, params: params);
-    LogTools.d("TAG", ": loginResult=${loginResult.toString()}");
+    LogTools.d("TAG", ": loginResult=${loginResult.data}");
     if (loginResult.ok) {
-      UserInfo userInfo = UserInfo.fromJson(loginResult.data);
+      UserInfoManager().saveUserInfo(loginResult.data);
       Get.offAllNamed(AppRoutes.main);
       return;
     }

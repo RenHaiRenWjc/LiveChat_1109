@@ -20,7 +20,7 @@ class DioCore with DioMixin implements Dio {
   InterceptorsWrapper paramsInterceptor() => InterceptorsWrapper(
       onRequest: (options, handler) => requestInterceptor(options, handler),
       onResponse: (response, handler) {
-        LogTools.d("TAG", "----onResponse, data:${response.data}，请求url：${response.requestOptions.path},method=${response.requestOptions.method},参数是：${response.requestOptions.queryParameters}");
+        LogTools.d("TAG", "----响应体, 请求url：${response.requestOptions.path}, data:${response.data}，method=${response.requestOptions.method},参数是：${response.requestOptions.queryParameters}");
         return handler.next(response);
       },
       onError: (DioException e, handler) {
@@ -35,7 +35,7 @@ class DioCore with DioMixin implements Dio {
 
     options.queryParameters.addAll(ParamsManager().awDealParams(options.queryParameters));
     options.headers.addAll(ParamsManager().headersParams);
-    LogTools.d("TAG", "onRequest，---开始请求:url =${options.path}--请求方式：method=${options.method}--params=${options.queryParameters}--headers=${options.headers} ");
+    LogTools.d("TAG", "请求体，---开始请求:url =${options.path}--请求方式：method=${options.method}--params=${options.queryParameters}--headers=${options.headers} ");
     return handler.next(options);
   }
 
