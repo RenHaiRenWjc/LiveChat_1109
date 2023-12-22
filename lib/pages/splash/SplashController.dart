@@ -16,7 +16,7 @@ class SplashController extends GetxController {
     UserInfoManager().fetchSpUserInfo().then((value) {
       LogTools.d("SplashController", ":fetchSpUserInfo value=$value ");
       if (value == null) {
-        Get.toNamed(AppRoutes.login);
+        Get.toNamed(AppRoutes.main);
       } else {
         Get.toNamed(AppRoutes.main);
       }
