@@ -4,75 +4,75 @@ import 'package:com.jc.livechat/tim_ui_kit/ui/utils/platform.dart';
 import 'package:extended_text/extended_text.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_markdown/flutter_markdown.dart';
+// import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:com.jc.livechat/tim_ui_kit/ui/widgets/link_preview/compiler/md_text.dart';
 import 'package:tencent_im_base/base_widgets/tim_stateless_widget.dart';
 import 'package:com.jc.livechat/tim_ui_kit/ui/views/TIMUIKitChat/TIMUIKitTextField/special_text/DefaultSpecialTextSpanBuilder.dart';
 import 'package:com.jc.livechat/tim_ui_kit/ui/widgets/link_preview/common/utils.dart';
-import 'package:markdown/markdown.dart' as md;
+// import 'package:markdown/markdown.dart' as md;
 import 'package:tim_ui_kit_sticker_plugin/utils/tim_custom_face_data.dart';
 
 typedef ImageBuilder = Widget Function(
     Uri uri, String? imageDirectory, double? width, double? height);
 
-class LinkTextMarkdown extends TIMStatelessWidget {
-  /// Callback for when link is tapped
-  final void Function(String)? onLinkTap;
-
-  /// message text
-  final String messageText;
-
-  /// text style for default words
-  final TextStyle? style;
-
-  final bool? isEnableTextSelection;
-
-  final bool isUseQQPackage;
-
-  final bool isUseTencentCloudChatPackage;
-
-  final List<CustomEmojiFaceData> customEmojiStickerList;
-
-  const LinkTextMarkdown(
-      {Key? key,
-      required this.messageText,
-      this.isUseQQPackage = false,
-      this.isUseTencentCloudChatPackage = false,
-      this.customEmojiStickerList = const [],
-      this.isEnableTextSelection,
-      this.onLinkTap,
-      this.style})
-      : super(key: key);
-
-  @override
-  Widget timBuild(BuildContext context) {
-    return MarkdownBody(
-      data: mdTextCompiler(messageText,
-          isUseQQPackage: isUseQQPackage,
-          isUseTencentCloudChatPackage: isUseTencentCloudChatPackage,
-          customEmojiStickerList: customEmojiStickerList),
-      selectable: isEnableTextSelection ?? false,
-      styleSheet: MarkdownStyleSheet.fromTheme(ThemeData(
-              textTheme: TextTheme(
-                  bodyText2: style ?? const TextStyle(fontSize: 16.0))))
-          .copyWith(
-        a: TextStyle(color: LinkUtils.hexToColor("015fff")),
-      ),
-      extensionSet: md.ExtensionSet.gitHubWeb,
-      onTapLink: (
-        String link,
-        String? href,
-        String title,
-      ) {
-        if (onLinkTap != null) {
-          onLinkTap!(href ?? "");
-        } else {
-          LinkUtils.launchURL(context, href ?? "");
-        }
-      },
-    );
-  }
-}
+// class LinkTextMarkdown extends TIMStatelessWidget {
+//   /// Callback for when link is tapped
+//   final void Function(String)? onLinkTap;
+//
+//   /// message text
+//   final String messageText;
+//
+//   /// text style for default words
+//   final TextStyle? style;
+//
+//   final bool? isEnableTextSelection;
+//
+//   final bool isUseQQPackage;
+//
+//   final bool isUseTencentCloudChatPackage;
+//
+//   final List<CustomEmojiFaceData> customEmojiStickerList;
+//
+//   const LinkTextMarkdown(
+//       {Key? key,
+//       required this.messageText,
+//       this.isUseQQPackage = false,
+//       this.isUseTencentCloudChatPackage = false,
+//       this.customEmojiStickerList = const [],
+//       this.isEnableTextSelection,
+//       this.onLinkTap,
+//       this.style})
+//       : super(key: key);
+//
+//   @override
+//   Widget timBuild(BuildContext context) {
+//     return MarkdownBody(
+//       data: mdTextCompiler(messageText,
+//           isUseQQPackage: isUseQQPackage,
+//           isUseTencentCloudChatPackage: isUseTencentCloudChatPackage,
+//           customEmojiStickerList: customEmojiStickerList),
+//       selectable: isEnableTextSelection ?? false,
+//       styleSheet: MarkdownStyleSheet.fromTheme(ThemeData(
+//               textTheme: TextTheme(
+//                   bodyText2: style ?? const TextStyle(fontSize: 16.0))))
+//           .copyWith(
+//         a: TextStyle(color: LinkUtils.hexToColor("015fff")),
+//       ),
+//       extensionSet: md.ExtensionSet.gitHubWeb,
+//       onTapLink: (
+//         String link,
+//         String? href,
+//         String title,
+//       ) {
+//         if (onLinkTap != null) {
+//           onLinkTap!(href ?? "");
+//         } else {
+//           LinkUtils.launchURL(context, href ?? "");
+//         }
+//       },
+//     );
+//   }
+// }
 
 class LinkText extends TIMStatelessWidget {
   /// Callback for when link is tapped

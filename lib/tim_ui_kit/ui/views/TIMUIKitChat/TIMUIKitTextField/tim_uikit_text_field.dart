@@ -20,7 +20,7 @@ import 'package:com.jc.livechat/tim_ui_kit/ui/utils/message.dart';
 import 'package:com.jc.livechat/tim_ui_kit/ui/utils/platform.dart';
 import 'package:com.jc.livechat/tim_ui_kit/ui/utils/screen_utils.dart';
 import 'package:com.jc.livechat/tim_ui_kit/ui/views/TIMUIKitChat/TIMUIKitTextField/special_text/emoji_text.dart';
-import 'package:com.jc.livechat/tim_ui_kit/ui/views/TIMUIKitChat/TIMUIKitTextField/tim_uikit_at_text.dart';
+// import 'package:com.jc.livechat/tim_ui_kit/ui/views/TIMUIKitChat/TIMUIKitTextField/tim_uikit_at_text.dart';
 import 'package:com.jc.livechat/tim_ui_kit/ui/views/TIMUIKitChat/TIMUIKitTextField/tim_uikit_text_field_layout/narrow.dart';
 import 'package:com.jc.livechat/tim_ui_kit/ui/views/TIMUIKitChat/TIMUIKitTextField/tim_uikit_text_field_layout/wide.dart';
 
@@ -606,20 +606,21 @@ class _InputTextFieldState extends TIMUIKitState<TIMUIKitInputTextField> {
         model.showAtMemberList = [];
         isAddingAtSearchWords = false;
       }
-    } else if (textLength > 0 && text[textLength - 1] == "@" && lastText.length < textLength) {
-      V2TimGroupMemberFullInfo? memberInfo = await Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => AtText(groupMemberList: model.groupMemberList, groupInfo: model.groupInfo, groupID: groupID, canAtAll: canAtAll, groupType: widget.groupType),
-        ),
-      );
-      final showName = _getShowName(memberInfo);
-      if (memberInfo != null) {
-        mentionedMembersMap["@$showName"] = memberInfo;
-        textEditingController.text = "$text$showName ";
-        lastText = "$text$showName ";
-      }
     }
+    // else if (textLength > 0 && text[textLength - 1] == "@" && lastText.length < textLength) {
+    //   V2TimGroupMemberFullInfo? memberInfo = await Navigator.push(
+    //     context,
+    //     MaterialPageRoute(
+    //       builder: (context) => AtText(groupMemberList: model.groupMemberList, groupInfo: model.groupInfo, groupID: groupID, canAtAll: canAtAll, groupType: widget.groupType),
+    //     ),
+    //   );
+    //   final showName = _getShowName(memberInfo);
+    //   if (memberInfo != null) {
+    //     mentionedMembersMap["@$showName"] = memberInfo;
+    //     textEditingController.text = "$text$showName ";
+    //     lastText = "$text$showName ";
+    //   }
+    // }
     lastText = textEditingController.text;
   }
 

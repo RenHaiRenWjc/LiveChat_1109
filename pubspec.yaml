@@ -64,7 +64,7 @@ dependencies:
   loading_animation_widget: ^1.1.0+3
 #  permission_handler: ^10.2.0
   tuple: ^2.0.0
-  flutter_markdown: ^0.6.15
+#  flutter_markdown: ^0.6.15
   url_launcher: ^6.1.4
   universal_html: ^2.2.2
   link_preview_generator_for_us: ^2.0.0
@@ -81,7 +81,7 @@ dependencies:
   path: ^1.8.1
   tencent_cloud_uikit_core: ^1.2.1
   pasteboard: ^0.2.0
-  desktop_drop: ^0.4.4
+#  desktop_drop: ^0.4.4
 #  device_info_plus: any
   cross_file: ^0.3.3+4
   csslib: 0.17.2

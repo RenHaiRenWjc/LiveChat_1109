@@ -233,14 +233,6 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.0.6"
-  desktop_drop:
-    dependency: "direct main"
-    description:
-      name: desktop_drop
-      sha256: d55a010fe46c8e8fcff4ea4b451a9ff84a162217bdb3b2a0aa1479776205e15d
-      url: "https://pub.flutter-io.cn"
-    source: hosted
-    version: "0.4.4"
   device_info_plus:
     dependency: "direct main"
     description:
@@ -446,14 +438,6 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "2.0.3"
-  flutter_markdown:
-    dependency: "direct main"
-    description:
-      name: flutter_markdown
-      sha256: "35108526a233cc0755664d445f8a6b4b61e6f8fe993b3658b80b4a26827fc196"
-      url: "https://pub.flutter-io.cn"
-    source: hosted
-    version: "0.6.18+2"
   flutter_native_splash:
     dependency: "direct main"
     description:

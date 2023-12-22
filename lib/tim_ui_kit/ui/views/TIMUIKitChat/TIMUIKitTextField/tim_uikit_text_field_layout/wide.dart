@@ -785,25 +785,25 @@ class _TIMUIKitTextFieldLayoutWideState extends TIMUIKitState<TIMUIKitTextFieldL
               }
             },
             svgPath: "images/tim_kit/tim_kit/svg/send_video.svg"),
-      if (config.showMessageHistoryButton)
-        DesktopControlBarItem(
-            item: "history",
-            showName: TIM_t("消息历史"),
-            onClick: (offset) {
-              TUIKitWidePopup.showPopupWindow(
-                  operationKey: TUIKitWideModalOperationKey.chatHistory,
-                  context: context,
-                  width: MediaQuery.of(context).size.width * 0.5,
-                  height: MediaQuery.of(context).size.width * 0.5,
-                  child: (onClose) => TIMUIKitSearchMsgDetail(
-                        currentConversation: widget.currentConversation,
-                        keyword: '',
-                        initMessageList: widget.model.getOriginMessageList().getRange(0, min(widget.model.getOriginMessageList().length, 100)).toList(),
-                        onTapConversation: (V2TimConversation conversation, V2TimMessage? message) {},
-                      ),
-                  theme: widget.theme);
-            },
-            svgPath: "images/tim_kit/tim_kit/svg/message_history.svg"),
+      // if (config.showMessageHistoryButton)
+      //   DesktopControlBarItem(
+      //       item: "history",
+      //       showName: TIM_t("消息历史"),
+      //       onClick: (offset) {
+      //         TUIKitWidePopup.showPopupWindow(
+      //             operationKey: TUIKitWideModalOperationKey.chatHistory,
+      //             context: context,
+      //             width: MediaQuery.of(context).size.width * 0.5,
+      //             height: MediaQuery.of(context).size.width * 0.5,
+      //             child: (onClose) => TIMUIKitSearchMsgDetail(
+      //                   currentConversation: widget.currentConversation,
+      //                   keyword: '',
+      //                   initMessageList: widget.model.getOriginMessageList().getRange(0, min(widget.model.getOriginMessageList().length, 100)).toList(),
+      //                   onTapConversation: (V2TimConversation conversation, V2TimMessage? message) {},
+      //                 ),
+      //             theme: widget.theme);
+      //       },
+      //       svgPath: "images/tim_kit/tim_kit/svg/message_history.svg"),
     ];
     defaultControlBarItems = itemsList;
   }

@@ -6,7 +6,7 @@ import 'package:com.jc.livechat/tim_ui_kit/data_services/services_locatar.dart';
 import 'package:com.jc.livechat/tim_ui_kit/tencent_cloud_chat_uikit.dart';
 
 import 'package:com.jc.livechat/tim_ui_kit/ui/utils/platform.dart';
-import 'package:com.jc.livechat/tim_ui_kit/ui/views/TIMUIKitGroupProfile/widgets/tim_ui_group_member_search.dart';
+// import 'package:com.jc.livechat/tim_ui_kit/ui/views/TIMUIKitGroupProfile/widgets/tim_ui_group_member_search.dart';
 import 'package:com.jc.livechat/tim_ui_kit/ui/widgets/group_member_list.dart';
 import 'package:com.jc.livechat/tim_ui_kit/base_widgets/tim_ui_kit_base.dart';
 
@@ -178,26 +178,28 @@ class _SelectCallInviterState extends TIMUIKitState<SelectCallInviter> {
             ),
           ),
         ),
-        body: ((searchMemberList ?? []).isNotEmpty || loading == false)
-            ? GroupProfileMemberList(
-                customTopArea: PlatformUtils().isWeb
-                    ? null
-                    : GroupMemberSearchTextField(
-                        onTextChange: (text) =>
-                            handleSearchGroupMembers(text, context),
-                      ),
-                memberList: (searchMemberList ?? [])
-                    .where((element) =>
-                        element?.userID != _coreServicesImpl.loginInfo.userID)
-                    .toList(),
-                canSlideDelete: false,
-                canSelectMember: true,
-                onSelectedMemberChange: (member) {
-                  selectedMember = member;
-                  setState(() {});
-                },
-              )
-            : Center(
+        body:
+        // ((searchMemberList ?? []).isNotEmpty || loading == false)
+        //     ? GroupProfileMemberList(
+        //         customTopArea: PlatformUtils().isWeb
+        //             ? null
+        //             : GroupMemberSearchTextField(
+        //                 onTextChange: (text) =>
+        //                     handleSearchGroupMembers(text, context),
+        //               ),
+        //         memberList: (searchMemberList ?? [])
+        //             .where((element) =>
+        //                 element?.userID != _coreServicesImpl.loginInfo.userID)
+        //             .toList(),
+        //         canSlideDelete: false,
+        //         canSelectMember: true,
+        //         onSelectedMemberChange: (member) {
+        //           selectedMember = member;
+        //           setState(() {});
+        //         },
+        //       )
+        //     :
+        Center(
                 child: LoadingAnimationWidget.staggeredDotsWave(
                   color: theme.primaryColor ?? Colors.grey,
                   size: 40,
