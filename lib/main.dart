@@ -1,4 +1,6 @@
+import 'package:com.jc.livechat/pages/manager/ThirdStartUpManager.dart';
 import 'package:com.jc.livechat/router/GetPages.dart';
+import 'package:com.jc.livechat/tim_ui_kit/tencent_cloud_chat_uikit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 
@@ -8,11 +10,11 @@ import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 import 'router/AppRoutes.dart';
 
-
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   initialization(null);
   runApp(const MyApp());
+  ThirdStartUpManager().init();
 }
 
 //启动图延时移除方法

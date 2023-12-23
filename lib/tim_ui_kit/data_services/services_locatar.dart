@@ -24,32 +24,26 @@ bool boolIsInitailized = false;
 void setupServiceLocator() {
   if (!boolIsInitailized) {
     // setting
-    serviceLocator.registerSingleton<TUISettingModel>(TUISettingModel());
+    // serviceLocator.registerSingleton<TUISettingModel>(TUISettingModel());
 
     // services
     serviceLocator.registerSingleton<CoreServicesImpl>(CoreServicesImpl());
-    serviceLocator
-        .registerSingleton<TUISelfInfoViewModel>(TUISelfInfoViewModel());
-    serviceLocator
-        .registerSingleton<ConversationService>(ConversationServicesImpl());
+    serviceLocator.registerSingleton<TUISelfInfoViewModel>(TUISelfInfoViewModel());
+    serviceLocator.registerSingleton<ConversationService>(ConversationServicesImpl());
     serviceLocator.registerSingleton<MessageService>(MessageServiceImpl());
-    serviceLocator
-        .registerSingleton<FriendshipServices>(FriendshipServicesImpl());
-    serviceLocator.registerSingleton<GroupServices>(GroupServicesImpl());
+    serviceLocator.registerSingleton<FriendshipServices>(FriendshipServicesImpl());
+    // serviceLocator.registerSingleton<GroupServices>(GroupServicesImpl());
 
     // view models
     serviceLocator.registerSingleton<TUIChatGlobalModel>(TUIChatGlobalModel());
     serviceLocator.registerSingleton<TUIChatModelTools>(TUIChatModelTools());
-    serviceLocator.registerSingleton<TUIConversationViewModel>(
-        TUIConversationViewModel());
-    serviceLocator
-        .registerSingleton<TUIFriendShipViewModel>(TUIFriendShipViewModel());
+    serviceLocator.registerSingleton<TUIConversationViewModel>(TUIConversationViewModel());
+    serviceLocator.registerSingleton<TUIFriendShipViewModel>(TUIFriendShipViewModel());
     serviceLocator.registerSingleton<TUIThemeViewModel>(TUIThemeViewModel());
-    serviceLocator.registerSingleton<TUISearchViewModel>(TUISearchViewModel());
+    // serviceLocator.registerSingleton<TUISearchViewModel>(TUISearchViewModel());
 
     // listener models
-    serviceLocator
-        .registerSingleton<TUIGroupListenerModel>(TUIGroupListenerModel());
+    // serviceLocator.registerSingleton<TUIGroupListenerModel>(TUIGroupListenerModel());
     boolIsInitailized = true;
   }
 }
