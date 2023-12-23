@@ -1,11 +1,11 @@
 import 'package:com.jc.livechat/bean/UserInfo.dart';
 import 'package:com.jc.livechat/network/ApiService.dart';
 import 'package:com.jc.livechat/network/ServiceHttp.dart';
-import 'package:com.jc.livechat/pages/manager/UserInfoManager.dart';
 import 'package:com.jc.livechat/router/AppRoutes.dart';
 import 'package:get/get.dart';
 
 import '../../common/LogTools.dart';
+import '../../manager/UserInfoManager.dart';
 
 class LoginPageController extends GetxController {
   @override
