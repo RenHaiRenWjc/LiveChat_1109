@@ -1,7 +1,8 @@
 import 'package:com.jc.livechat/pages/main/MainController.dart';
-import 'package:com.jc.livechat/pages/splash/SplashPage.dart';
+import 'package:com.jc.livechat/pages/main/home/HomePage.dart';
+import 'package:com.jc.livechat/pages/main/me/MinePage.dart';
+import 'package:com.jc.livechat/tim_ui_kit/ui/widgets/keepalive_wrapper.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
 
 import '../../GlobalConstant/ColorConst.dart';
@@ -13,14 +14,14 @@ class MainPage extends GetView<MainController> {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<MainController>(
-      builder: (logic) {
-        return Scaffold(
-          bottomNavigationBar: BottomNavigationBar(
+    return Scaffold(
+      bottomNavigationBar: GetBuilder<MainController>(
+        builder: (MainController logic) {
+          return BottomNavigationBar(
             backgroundColor: Colors.white,
-            currentIndex: logic.currentIndex,
             type: BottomNavigationBarType.fixed,
             selectedItemColor: ColorConst.wyMainColor,
+            currentIndex: logic.currentIndex,
             unselectedItemColor: HexColor("#78777F"),
             selectedFontSize: 30,
             unselectedFontSize: 30,
@@ -29,32 +30,37 @@ class MainPage extends GetView<MainController> {
               logic.onBottomTap(index);
             },
             items: [
-              BottomNavigationBarItem(label: _bottomNavList[0], icon: logic.currentIndex == 0 ? _bottomIcon('images/tim_kit/close.png') : _bottomIcon('images/tim_kit/clear.png')),
-              BottomNavigationBarItem(label: _bottomNavList[1], icon: logic.currentIndex == 1 ? _bottomIcon('images/tim_kit/close.png') : _bottomIcon('images/tim_kit/clear.png')),
-              BottomNavigationBarItem(label: _bottomNavList[2], icon: logic.currentIndex == 2 ? _bottomIcon('images/tim_kit/close.png') : _bottomIcon('images/tim_kit/clear.png')),
+              BottomNavigationBarItem(
+                  label: _bottomNavList[0],
+                  icon: logic.currentIndex == 0 ? _bottomIcon('images/tim_kit/close.png') : _bottomIcon('images/tim_kit/clear.png')),
+              BottomNavigationBarItem(
+                  label: _bottomNavList[1],
+                  icon: logic.currentIndex == 1 ? _bottomIcon('images/tim_kit/close.png') : _bottomIcon('images/tim_kit/clear.png')),
+              BottomNavigationBarItem(
+                  label: _bottomNavList[2],
+                  icon: logic.currentIndex == 2 ? _bottomIcon('images/tim_kit/close.png') : _bottomIcon('images/tim_kit/clear.png')),
             ],
-          ),
-          body: _currentPage(),
-        );
-      },
+          );
+        },
+      ),
+      body: showPageView(),
     );
   }
 
-  // 底部导航对应的页面
-  Widget _currentPage() {
+  Widget showPageView() {
     var pages = [
-      ConversationPage(),
-      SplashPage(),
-      SplashPage(),
+      KeepAliveWrapper(child: HomePage()),
+      KeepAliveWrapper(child: ConversationPage()),
+      KeepAliveWrapper(child: MinePage()),
     ];
-    return PageView.builder(
-        scrollDirection: Axis.horizontal,
-        onPageChanged: (int index) {
-          controller.onBottomTap(index);
-        },
-        controller: _pageController,
-        itemCount: pages.length,
-        itemBuilder: (context, index) => pages[index]);
+
+    return PageView(
+      controller: _pageController,
+      onPageChanged: (index) {
+        controller.onBottomTap(index);
+      },
+      children: pages,
+    );
   }
 
   Widget _bottomIcon(path) {

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../common/LogTools.dart';
 import '../../../tim_ui_kit/ui/views/TIMUIKitConversation/tim_uikit_conversation.dart';
 import 'ConversationLogic.dart';
 
@@ -12,6 +13,7 @@ class ConversationPage extends GetView<ConversationLogic> {
 
   @override
   Widget build(BuildContext context) {
+    LogTools.d("TAG", "build: ConversationPage--");
     return Scaffold(
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by

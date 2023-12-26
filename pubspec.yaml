@@ -33,6 +33,8 @@ dependencies:
 
   device_info_plus: ^9.1.0
 
+  flukit: ^3.0.1
+
   adaptive_action_sheet: ^2.0.1
   provider: ^6.0.1
   intl: any
@@ -90,6 +92,7 @@ dependencies:
   markdown: ^7.1.0
 #  logger: ^2.0.1
   image_clipboard: ^1.0.0+2
+
 
 
 dev_dependencies:

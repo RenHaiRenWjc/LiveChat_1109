@@ -74,10 +74,10 @@ class TIMUIKitCore {
   }
 
   static initTIMUIKIT() async {
-    int sdkappid = 111;
-    String userid = "uid";
+    int sdkappid = 1400482074;
+    String userid = "999656442";
     String secret = "11";
-    String usersig = "sign";
+    String usersig = "eJw1jssKwjAURP8laym3MUmTggsfBaUihArispgo1xehSYMi-ru11eWcmQPzItt1ldiHw8aSPOWcUwAY9TTahuSEJkCG7M2ldg5Nt2MATFLI2NCgsfeAR*wFpZTggjH61-DU0TQsTDFvx*Wm0Adfl7sQ9TlOXXudLfeVF0*pwVuz8l5OfmLA2-dTBlTxTAj1-gCguDHX";
     if (sdkappid == 0 || userid == '' || secret == '' || usersig == '') {
       print("The running parameters are abnormal, please check");
       return;

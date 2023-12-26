@@ -17,7 +17,7 @@ class SplashController extends GetxController {
       if (value == null) {
         Get.toNamed(AppRoutes.main);
       } else {
-        Get.toNamed(AppRoutes.main);
+        Get.off(AppRoutes.main);
       }
     });
   }
