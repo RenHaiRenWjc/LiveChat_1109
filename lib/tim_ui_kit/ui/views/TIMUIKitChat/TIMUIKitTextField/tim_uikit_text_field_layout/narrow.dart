@@ -449,7 +449,7 @@ class _TIMUIKitTextFieldLayoutNarrowState extends TIMUIKitState<TIMUIKitTextFiel
                         },
                         child: SvgPicture.asset(
                           showSendSoundText ? 'images/tim_kit/keyboard.svg' : 'images/tim_kit/voice.svg',
-                          package: 'tencent_cloud_chat_uikit',
+                          // package: 'com.jc.livechat',
                           color: const Color.fromRGBO(68, 68, 68, 1),
                           height: 28,
                           width: 28,
@@ -532,7 +532,7 @@ class _TIMUIKitTextFieldLayoutNarrowState extends TIMUIKitState<TIMUIKitTextFiel
                             ? Icon(showEmojiPanel ? Icons.keyboard_alt_outlined : Icons.mood_outlined, color: hexToColor("5c6168"), size: 32)
                             : SvgPicture.asset(
                                 showEmojiPanel ? 'images/tim_kit/keyboard.svg' : 'images/tim_kit/face.svg',
-                                package: 'tencent_cloud_chat_uikit',
+                                // package: 'tencent_cloud_chat_uikit',
                                 color: const Color.fromRGBO(68, 68, 68, 1),
                                 height: 28,
                                 width: 28,
@@ -553,7 +553,7 @@ class _TIMUIKitTextFieldLayoutNarrowState extends TIMUIKitState<TIMUIKitTextFiel
                             ? Icon(Icons.add_circle_outline_outlined, color: hexToColor("5c6168"), size: 32)
                             : SvgPicture.asset(
                                 'images/tim_kit/add.svg',
-                                package: 'tencent_cloud_chat_uikit',
+                                // package: 'tencent_cloud_chat_uikit',
                                 color: const Color.fromRGBO(68, 68, 68, 1),
                                 height: 28,
                                 width: 28,

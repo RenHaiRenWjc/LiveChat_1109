@@ -146,7 +146,7 @@ class _VideoCustomControlsState extends TIMUIKitState<VideoCustomControls>
             IconButton(
               icon: Image.asset(
                 'images/close.png',
-                package: 'tencent_cloud_chat_uikit',
+                // package: 'tencent_cloud_chat_uikit',
               ),
               iconSize: 30,
               onPressed: () {
@@ -160,7 +160,7 @@ class _VideoCustomControlsState extends TIMUIKitState<VideoCustomControls>
             IconButton(
               icon: Image.asset(
                 'images/download.png',
-                package: 'tencent_cloud_chat_uikit',
+                // package: 'tencent_cloud_chat_uikit',
               ),
               iconSize: 30,
               onPressed: () async {

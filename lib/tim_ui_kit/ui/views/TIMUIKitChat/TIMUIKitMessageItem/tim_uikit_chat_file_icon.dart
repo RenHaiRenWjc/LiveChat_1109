@@ -45,7 +45,7 @@ class TIMUIKitFileIcon extends TIMUIKitStatelessWidget {
   Widget _getFileIcon() {
     return Image.asset(
       fileMap[fileFormat?.toLowerCase()] ?? "images/unknown.png",
-      package: 'tencent_cloud_chat_uikit',
+      // package: 'tencent_cloud_chat_uikit',
     );
   }
 

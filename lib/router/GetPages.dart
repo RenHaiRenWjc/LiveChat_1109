@@ -1,3 +1,5 @@
+import 'package:com.jc.livechat/pages/chat/ChatLogic.dart';
+import 'package:com.jc.livechat/pages/chat/ChatPage.dart';
 import 'package:com.jc.livechat/pages/login/LoginPage.dart';
 import 'package:com.jc.livechat/pages/login/LoginPageController.dart';
 import 'package:com.jc.livechat/pages/main/MainController.dart';
@@ -29,5 +31,6 @@ class GetPages {
         binding: BindingsBuilder(() => Get.lazyPut<ConversationLogic>(() => ConversationLogic()))),
     GetPage(name: AppRoutes.home, page: () => HomePage(), binding: BindingsBuilder(() => Get.lazyPut<HomeLogic>(() => HomeLogic()))),
     GetPage(name: AppRoutes.mine, page: () => MinePage(), binding: BindingsBuilder(() => Get.lazyPut<MineLogic>(() => MineLogic()))),
+    GetPage(name: AppRoutes.chat, page: () => ChatPage(), binding: BindingsBuilder(() => Get.lazyPut<ChatLogic>(() => ChatLogic()))),
   ];
 }

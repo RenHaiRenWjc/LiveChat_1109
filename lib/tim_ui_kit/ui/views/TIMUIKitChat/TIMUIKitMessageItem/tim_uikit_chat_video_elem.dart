@@ -294,7 +294,7 @@ class _TIMUIKitVideoElemState extends TIMUIKitState<TIMUIKitVideoElem> {
                               // alignment: Alignment.center,
                               child: Center(
                                   child: Image.asset('images/tim_kit/play.png',
-                                      package: 'tencent_cloud_chat_uikit',
+                                      // package: 'tencent_cloud_chat_uikit',
                                       height: 64)),
                             ),
                           if (widget.message.videoElem?.duration != null &&

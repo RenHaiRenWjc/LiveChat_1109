@@ -213,13 +213,13 @@ class _TIMUIKitSoundElemState extends TIMUIKitState<TIMUIKitSoundElem> {
                       isPlaying
                           ? Image.asset(
                               'images/tim_kit/play_voice_send.gif',
-                              package: 'tencent_cloud_chat_uikit',
+                              // package: 'tencent_cloud_chat_uikit',
                               width: 16,
                               height: 16,
                             )
                           : Image.asset(
                               'images/tim_kit/voice_send.png',
-                              package: 'tencent_cloud_chat_uikit',
+                              // package: 'tencent_cloud_chat_uikit',
                               width: 16,
                               height: 16,
                             ),
@@ -228,7 +228,7 @@ class _TIMUIKitSoundElemState extends TIMUIKitState<TIMUIKitSoundElem> {
                       isPlaying
                           ? Image.asset(
                               'images/tim_kit/play_voice_receive.gif',
-                              package: 'tencent_cloud_chat_uikit',
+                              // package: 'tencent_cloud_chat_uikit',
                               width: 16,
                               height: 16,
                             )
@@ -236,7 +236,7 @@ class _TIMUIKitSoundElemState extends TIMUIKitState<TIMUIKitSoundElem> {
                               'images/tim_kit/voice_receive.png',
                               width: 16,
                               height: 16,
-                              package: 'tencent_cloud_chat_uikit',
+                              // package: 'tencent_cloud_chat_uikit',
                             ),
                       Text(
                         " ${stateElement.duration}''",

@@ -7,4 +7,5 @@ class AppRoutes {
   static const conversation = '/conversation';
   static const home = '/home';
   static const mine = '/mine';
+  static const chat = '/chat';
 }

@@ -129,7 +129,7 @@ class _MorePanelState extends TIMUIKitState<MorePanel> {
                   borderRadius: BorderRadius.all(Radius.circular(5))),
               child: SvgPicture.asset(
                 "images/tim_kit/screen.svg",
-                package: 'tencent_cloud_chat_uikit',
+                // package: 'tencent_cloud_chat_uikit',
                 height: 64,
                 width: 64,
               ),
@@ -155,7 +155,7 @@ class _MorePanelState extends TIMUIKitState<MorePanel> {
                   borderRadius: BorderRadius.all(Radius.circular(5))),
               child: SvgPicture.asset(
                 "images/tim_kit/photo.svg",
-                package: 'tencent_cloud_chat_uikit',
+                // package: 'tencent_cloud_chat_uikit',
                 height: 64,
                 width: 64,
               ),
@@ -181,7 +181,7 @@ class _MorePanelState extends TIMUIKitState<MorePanel> {
                   borderRadius: BorderRadius.all(Radius.circular(5))),
               child: SvgPicture.asset(
                 "images/tim_kit/photo.svg",
-                package: 'tencent_cloud_chat_uikit',
+                // package: 'tencent_cloud_chat_uikit',
                 height: 64,
                 width: 64,
               ),
@@ -228,7 +228,7 @@ class _MorePanelState extends TIMUIKitState<MorePanel> {
                 borderRadius: BorderRadius.all(Radius.circular(5))),
             child: SvgPicture.asset(
               "images/tim_kit/file.svg",
-              package: 'tencent_cloud_chat_uikit',
+              // package: 'tencent_cloud_chat_uikit',
               height: 64,
               width: 64,
             ),
@@ -254,7 +254,7 @@ class _MorePanelState extends TIMUIKitState<MorePanel> {
                   borderRadius: BorderRadius.all(Radius.circular(5))),
               child: SvgPicture.asset(
                 "images/tim_kit/video-call.svg",
-                package: 'tencent_cloud_chat_uikit',
+                // package: 'tencent_cloud_chat_uikit',
                 height: 64,
                 width: 64,
               ),
@@ -280,7 +280,7 @@ class _MorePanelState extends TIMUIKitState<MorePanel> {
                   borderRadius: BorderRadius.all(Radius.circular(5))),
               child: SvgPicture.asset(
                 "images/tim_kit/voice-call.svg",
-                package: 'tencent_cloud_chat_uikit',
+                // package: 'tencent_cloud_chat_uikit',
                 height: 64,
                 width: 64,
               ),
