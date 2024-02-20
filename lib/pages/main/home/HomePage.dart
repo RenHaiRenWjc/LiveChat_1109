@@ -20,6 +20,9 @@ class HomePage extends GetView<HomeLogic> {
       child: Center(
         child: Column(
           children: [
+            Padding(
+              padding: EdgeInsets.only(top: 40),
+            ),
             Text("首页"),
             Text("test"),
             GestureDetector(
@@ -32,5 +35,3 @@ class HomePage extends GetView<HomeLogic> {
     );
   }
 }
-
-
