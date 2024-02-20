@@ -86,12 +86,12 @@ dependencies:
 #  desktop_drop: ^0.4.4
 #  device_info_plus: any
   cross_file: ^0.3.3+4
-  csslib: 0.17.2
+  csslib: ^1.0.0
   diff_match_patch: ^0.4.1
   just_audio: ^0.9.34
   markdown: ^7.1.0
 #  logger: ^2.0.1
-  image_clipboard: ^1.0.0+2
+  image_clipboard: ^1.1.0+1
   desktop_drop: ^0.4.4
 
 
