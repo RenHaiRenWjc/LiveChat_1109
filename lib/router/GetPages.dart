@@ -11,6 +11,7 @@ import 'package:com.jc.livechat/pages/main/me/MinePage.dart';
 import 'package:com.jc.livechat/pages/main/message/ConversationPage.dart';
 import 'package:com.jc.livechat/pages/splash/SplashController.dart';
 import 'package:com.jc.livechat/pages/splash/SplashPage.dart';
+import 'package:com.jc.livechat/pages/test/TestPage.dart';
 import 'package:get/get.dart';
 
 import '../pages/main/message/ConversationLogic.dart';
@@ -32,5 +33,6 @@ class GetPages {
     GetPage(name: AppRoutes.home, page: () => HomePage(), binding: BindingsBuilder(() => Get.lazyPut<HomeLogic>(() => HomeLogic()))),
     GetPage(name: AppRoutes.mine, page: () => MinePage(), binding: BindingsBuilder(() => Get.lazyPut<MineLogic>(() => MineLogic()))),
     GetPage(name: AppRoutes.chat, page: () => ChatPage(), binding: BindingsBuilder(() => Get.lazyPut<ChatLogic>(() => ChatLogic()))),
+    GetPage(name: AppRoutes.test, page: () => TestPage()),
   ];
 }

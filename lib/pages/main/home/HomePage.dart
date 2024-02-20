@@ -1,3 +1,4 @@
+import 'package:com.jc.livechat/router/AppRoutes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -17,8 +18,19 @@ class HomePage extends GetView<HomeLogic> {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 10.0),
       child: Center(
-        child: Text("首页"),
+        child: Column(
+          children: [
+            Text("首页"),
+            Text("test"),
+            GestureDetector(
+              onTap: () => {Get.toNamed(AppRoutes.test)},
+              child: Text("测试"),
+            )
+          ],
+        ),
       ),
     );
   }
 }
+
+
