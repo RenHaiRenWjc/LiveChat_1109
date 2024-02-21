@@ -92,6 +92,12 @@ class _ShoppingListState extends State<ShoppingList> {
         _shoppingCart.remove(product);
       }
     });
+
+
+    @override
+    void didUpdateWidget(oldWidget) {
+      super.didUpdateWidget(oldWidget);
+    }
   }
 
   @override
