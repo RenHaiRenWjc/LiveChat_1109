@@ -29,4 +29,10 @@ class LoginPageController extends GetxController {
       return;
     }
   }
+
+  Future<void> sendSMSCode(String phone) async {
+    Map<String, dynamic> params = {"username": phone, "resType": "1"};
+    var sendSMSCode = await ServiceHttp().post(ApiService.sendSMSPhoneCode, params: params);
+
+  }
 }
