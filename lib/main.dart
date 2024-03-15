@@ -1,4 +1,5 @@
-import 'package:com.jc.livechat/pages/test/TestInheritedWidget/CountContainer.dart';
+import 'package:com.jc.livechat/pages/test/TestInheritedWidget.dart';
+import 'package:com.jc.livechat/pages/test/TestNotificationWidget.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -52,7 +53,7 @@ class MyHomePage extends StatefulWidget {
   final String title;
 
   @override
-  State<MyHomePage> createState() => MyHomePageState();
+  State<MyHomePage> createState() => MyHomePageNotificationState();
 }
 
 // class _MyHomePageState extends State<MyHomePage> {
